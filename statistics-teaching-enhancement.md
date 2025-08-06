@@ -2,16 +2,59 @@
 
 ## Original Content (Dry Version)
 
-### Hypothesis Testing
-Hypothesis testing is a statistical method used to make decisions about population parameters based on sample data. The process involves:
+### Chapter 7: Hypothesis Testing
 
-1. Stating the null hypothesis (H₀) and alternative hypothesis (H₁)
-2. Choosing a significance level (α)
-3. Calculating the test statistic
-4. Determining the p-value
-5. Making a decision to reject or fail to reject the null hypothesis
+#### 7.1 Introduction
+Hypothesis testing is a statistical method used to make decisions about population parameters based on sample data. It provides a formal framework for testing claims about populations using evidence from samples.
 
-The Type I error occurs when we reject a true null hypothesis. The Type II error occurs when we fail to reject a false null hypothesis.
+#### 7.2 Components of Hypothesis Testing
+
+**The Null Hypothesis (H₀)**
+The null hypothesis represents the status quo or the claim to be tested. It is a statement of no effect or no difference. The null hypothesis is assumed to be true until evidence suggests otherwise.
+
+**The Alternative Hypothesis (H₁ or Hₐ)**
+The alternative hypothesis represents what we are trying to prove. It is the opposite of the null hypothesis and represents a new claim about the population parameter.
+
+#### 7.3 The Five-Step Process
+
+1. **State the Hypotheses**: Formulate H₀ and H₁ based on the research question
+2. **Set the Significance Level (α)**: Commonly set at 0.05 or 0.01
+3. **Calculate the Test Statistic**: Use appropriate formula based on the type of test
+4. **Determine the P-Value**: Calculate the probability of obtaining the observed results
+5. **Make a Decision**: Compare p-value to α and reject or fail to reject H₀
+
+#### 7.4 Types of Errors
+
+In hypothesis testing, two types of errors can occur:
+
+**Type I Error**
+A Type I error occurs when we reject a true null hypothesis. The probability of making a Type I error is denoted by α (alpha), which is the significance level of the test.
+
+**Type II Error**
+A Type II error occurs when we fail to reject a false null hypothesis. The probability of making a Type II error is denoted by β (beta).
+
+**Statistical Power**
+The power of a test is the probability of correctly rejecting a false null hypothesis, calculated as 1 - β.
+
+#### 7.5 One-Tailed vs Two-Tailed Tests
+
+Tests can be one-tailed (directional) or two-tailed (non-directional), depending on the nature of the alternative hypothesis. The choice affects the critical values and the interpretation of results.
+
+#### 7.6 Common Test Statistics
+
+Different test statistics are used depending on the situation:
+- Z-test: When population standard deviation is known
+- t-test: When population standard deviation is unknown
+- Chi-square test: For categorical data
+- F-test: For comparing variances
+
+#### 7.7 Interpreting Results
+
+When p-value < α: Reject the null hypothesis. There is sufficient evidence to support the alternative hypothesis.
+
+When p-value ≥ α: Fail to reject the null hypothesis. There is insufficient evidence to support the alternative hypothesis.
+
+Note: Failing to reject H₀ does not mean H₀ is proven true; it means there is not enough evidence to conclude it is false.
 
 ---
 
