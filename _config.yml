@@ -1,8 +1,7 @@
 # Jekyll configuration for GitHub Pages
-theme: minima
+# No theme - use custom layout only
 markdown: kramdown
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
+
+# No title or description for clean pages
+title: ""
+description: ""
