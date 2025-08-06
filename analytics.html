@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Analytics</title>
+    <style>
+        body {
+            font-family: -apple-system, system-ui, sans-serif;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f7fafc;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2d3748;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .visit {
+            background: #f7fafc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .timestamp {
+            color: #718096;
+            font-size: 14px;
+        }
+        .ref-code {
+            font-weight: bold;
+            color: #4a5568;
+        }
+        .no-visits {
+            color: #a0aec0;
+            padding: 40px;
+            text-align: center;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Page Visit Analytics</h1>
+        <p>Track when people view your shared links</p>
+        
+        <button onclick="loadVisits()">Refresh Data</button>
+        
+        <div id="visits">
+            <div class="no-visits">No visits tracked yet. Share your tracking links to see data here.</div>
+        </div>
+    </div>
+
+    <script>
+        // This is a simple client-side storage solution
+        // For production, you'd want a proper backend
+        
+        function loadVisits() {
+            // Check URL parameters for new visits
+            const urlParams = new URLSearchParams(window.location.search);
+            const ref = urlParams.get('ref');
+            
+            if (ref) {
+                // Store this visit
+                const visits = JSON.parse(localStorage.getItem('pageVisits') || '[]');
+                visits.push({
+                    ref: ref,
+                    timestamp: new Date().toISOString(),
+                    page: document.referrer || 'direct'
+                });
+                localStorage.setItem('pageVisits', JSON.stringify(visits));
+                
+                // Clean URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+            
+            // Display all visits
+            const visits = JSON.parse(localStorage.getItem('pageVisits') || '[]');
+            const visitsDiv = document.getElementById('visits');
+            
+            if (visits.length === 0) {
+                visitsDiv.innerHTML = '<div class="no-visits">No visits tracked yet. Share your tracking links to see data here.</div>';
+            } else {
+                visitsDiv.innerHTML = visits.reverse().map(visit => `
+                    <div class="visit">
+                        <div class="ref-code">Reference: ${visit.ref}</div>
+                        <div class="timestamp">Visited: ${new Date(visit.timestamp).toLocaleString()}</div>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        // Load on page load
+        loadVisits();
+    </script>
+</body>
+</html>

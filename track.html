@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Beckner - Resume</title>
+    <script>
+        // Simple tracking - logs to a free service
+        const trackingId = new URLSearchParams(window.location.search).get('ref') || 'direct';
+        const visitData = {
+            ref: trackingId,
+            timestamp: new Date().toISOString(),
+            page: 'resume'
+        };
+        
+        // Send to free webhook service (webhook.site gives you a free endpoint)
+        fetch('https://webhook.site/YOUR-UNIQUE-ID', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(visitData),
+            mode: 'no-cors'
+        });
+
+        // After tracking, redirect to actual resume
+        setTimeout(() => {
+            window.location.href = '/resume';  // Change to your resume page
+        }, 100);
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 50px; font-family: system-ui;">
+        <p>Loading resume...</p>
+    </div>
+</body>
+</html>
