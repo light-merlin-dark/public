@@ -15,10 +15,14 @@ help:
 # Main publish command
 publish:
 	@echo "📦 Publishing to GitHub Pages..."
+	@echo "📋 Copying symlinked files for GitHub Pages..."
+	@rm -f resume.md && cp ../resume.md resume.md
 	@git add -A
 	@git commit -m "Update GitHub Pages content - $$(date '+%Y-%m-%d %H:%M')" || echo "No changes to commit"
 	@git branch -M main 2>/dev/null || true
 	@git push -u origin main --force
+	@echo "🔗 Restoring symlinks..."
+	@rm resume.md && ln -s ../resume.md resume.md
 	@echo "✅ Published! View at: https://light-merlin-dark.github.io/public/"
 	@echo "⏳ Note: GitHub Pages may take a few minutes to update"
 
