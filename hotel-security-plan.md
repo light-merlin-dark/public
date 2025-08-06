@@ -1,5 +1,4 @@
 # Security Footage Management Plan
-## Hotel Suites House
 
 ### Current Situation
 The security camera storage drives are full, preventing new recordings. This is a critical safety issue - a recent incident went unrecorded because there was no available storage space.
@@ -52,7 +51,6 @@ This security work is **free of charge** - it's important for hotel safety and I
 ---
 
 # Plan de Gestión de Grabaciones de Seguridad
-## Hotel Suites House
 
 ### Situación Actual
 Los discos de almacenamiento de las cámaras de seguridad están llenos, impidiendo nuevas grabaciones. Este es un problema crítico de seguridad - un incidente reciente no se grabó porque no había espacio disponible.
