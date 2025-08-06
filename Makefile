@@ -32,7 +32,7 @@ setup:
 # Check deployment status
 status:
 	@echo "📊 Checking GitHub Pages status..."
-	@gh pages status || echo "GitHub Pages not yet configured. Run 'make setup' first."
+	@gh api repos/light-merlin-dark/public/pages --jq '.html_url, .status' || echo "GitHub Pages not yet configured. Run 'make setup' first."
 
 # Local preview server
 serve:
