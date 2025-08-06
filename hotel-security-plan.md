@@ -36,18 +36,10 @@ If the drives are NOT accessible from the admin computer:
 3. We'll need to set up the automation on whatever computer can access them
 4. This takes longer and requires physical handling of drives
 
-### Timeline
-- **Today**: Confirm drive access from admin computer
-- **Day 1-2**: Set up secure connection (if Option A)
-- **Day 2-3**: Write and test cleanup script
-- **Day 3-4**: Implement automated daily cleanup
-- **Ongoing**: System runs automatically, keeping your storage available
-
 ### Safety Features
 - **Test Mode First**: Shows what would be deleted without actually deleting
 - **Logs Everything**: Complete record of all deleted files
 - **Smart Deletion**: Only removes files older than 1 year
-- **Preserves Important Footage**: We can exclude specific dates if needed
 
 ### Cost
 This security work is **free of charge** - it's important for hotel safety and I want to help resolve this critical issue quickly.
@@ -56,9 +48,6 @@ This security work is **free of charge** - it's important for hotel safety and I
 1. Please check if you can access the security drives from the admin computer
 2. Let me know which option (A or B) applies
 3. We'll proceed with the appropriate solution
-
-**Contact**: Robert (Merlin)  
-**WhatsApp**: +1-562-561-3330
 
 ---
 
@@ -100,18 +89,10 @@ Si los discos NO son accesibles desde la computadora de administración:
 3. Necesitaremos configurar la automatización en la computadora que pueda accederlos
 4. Esto toma más tiempo y requiere manejo físico de los discos
 
-### Cronograma
-- **Hoy**: Confirmar acceso a discos desde computadora de administración
-- **Día 1-2**: Configurar conexión segura (si Opción A)
-- **Día 2-3**: Escribir y probar script de limpieza
-- **Día 3-4**: Implementar limpieza diaria automatizada
-- **Continuo**: El sistema funciona automáticamente, manteniendo disponible el almacenamiento
-
 ### Características de Seguridad
 - **Modo de Prueba Primero**: Muestra qué se eliminaría sin eliminar realmente
 - **Registra Todo**: Registro completo de todos los archivos eliminados
 - **Eliminación Inteligente**: Solo elimina archivos con más de 1 año
-- **Preserva Grabaciones Importantes**: Podemos excluir fechas específicas si es necesario
 
 ### Costo
 Este trabajo de seguridad es **sin cargo** - es importante para la seguridad del hotel y quiero ayudar a resolver este problema crítico rápidamente.
@@ -120,6 +101,3 @@ Este trabajo de seguridad es **sin cargo** - es importante para la seguridad del
 1. Por favor verifiquen si pueden acceder a los discos de seguridad desde la computadora de administración
 2. Avísenme cuál opción (A o B) aplica
 3. Procederemos con la solución apropiada
-
-**Contacto**: Robert (Merlin)  
-**WhatsApp**: +1-562-561-3330
